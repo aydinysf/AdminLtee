@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            margin-left: 300px;
+            animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+    </style>
+</head>
+
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Kurumlar Sayfası</h1>
+                </div>
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Kurumlar Tablosu</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Kurum Adı</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Kurum Adı">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Kurum Adresi</label>
+                    <textarea name="message" class="form-control" rows="10" cols="30"
+                        placeholder="Kurum Adresi"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Kurumsal Sevk Adresi</label>
+                    <textarea name="message" class="form-control" rows="10" cols="30"
+                        placeholder="Kurumsal Sevk Adresi "></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Kurum Aktifliği</label>
+                    <div class="col-sm-10">
+                        <input type="checkbox" id="vehicle1" name="vehicle1">
+                        <label for="vehicle1"> Kurum Aktif</label><br>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /.card-body -->
+
+         
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header border-0">
+                    <h3 class="mb-0">Kurumlar Listesi</h3>
+                </div>
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col" class="sort" data-sort="name">Kurum Adı</th>
+                                <th scope="col" class="sort" data-sort="budget">Kurum Adresi</th>
+                                <th scope="col" class="sort" data-sort="status">Kurumsal Sevk Adresi</th>
+                                <th scope="col">Kurum Aktifliği</th>
+
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">KurumAdı1</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">KurumAdresi1</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurumsal Sevk Adresi 1</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurum Aktifliği 1</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="#">Kurum Ekle</a>
+                                            <a class="dropdown-item" href="#">Kurum Sil</a>
+                                            <a class="dropdown-item" id="kullanicibutton">Kurum Kullaniciları</a>
+                                            <a class="dropdown-item" id="programbutton">Program Ata</a>
+                                            <a class="dropdown-item" id="programdonembutton">Periyot Ekle</a>
+                                            <a class="dropdown-item" id="cihazbutton">Cihazlar</a>
+                            
+                                        </div>
+                                    </div>
+                                </td>
+
+
+                            </tr>
+                            <tr>
+
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurum Adı2</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurum Adresi2</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurumsal Sevk Adresi2</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurum Aktifliği 2</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="#">Kurum Ekle</a>
+                                            <a class="dropdown-item" href="#">Kurum Sil</a>
+                                            <a class="dropdown-item" href="#">Kişi Ata</a>
+                                            <a class="dropdown-item" class="programbutton2">Program Ata</a>
+                                            <a class="dropdown-item" href="#">Periyot Ekle</a>
+                                            <a class="dropdown-item" href="#">Cihazlar</a>
+                                        </div>
+                                    </div>
+                                </td>
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurum Adı3</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurum Adresi3</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurumsal Sevk Adresi3 </span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Kurum Aktifliği 3</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="#">Kurum Ekle</a>
+                                            <a class="dropdown-item" href="#">Kurum Sil</a>
+                                            <a class="dropdown-item" href="#">Kişi Ata</a>
+                                            <a class="dropdown-item" class="programbutton3">Program Ata</a>
+                                            <a class="dropdown-item" href="#">Periyot Ekle</a>
+                                            <a class="dropdown-item" id="cihazbutton">Cihazlar</a>
+                                        </div>
+                                    </div>
+                                </td>
+
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                   <!-- Kuruma Ait Cihazlar -->
+               <div id="cihazmodal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="cihazclose">&times;</span>
+                        <h2>Kuruma Ait Cihazlar</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Cihaz Adı</label>
+                                    <select id="input-useractive" class="form-control" name="useractive">
+                                        <option value="True">Abbot</option>
+                                        <option value="False">Siemens</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Cihaz Modeli</label>
+                                    <select id="input-useractive" class="form-control" name="useractive">
+                                        <option value="True">Model1</option>
+                                        <option value="False">Model2</option>
+
+                                    </select>
+                                </div>
+                             
+                                <div class="col-6 text-right">
+                                    <button  class="btn btn-neutral btn-primary">Ekle</button>
+                              </div>
+                                  
+                            </div>
+                            </form>
+
+                  
+
+                            <div class="table-responsive">
+                                <table class="table align-items-center table-flush">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" class="sort" data-sort="name">Cihaz Adları</th>
+                                            <th scope="col" class="sort" data-sort="name">Cihaz Modelleri</th>
+                                  
+                         
+        
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list">
+                                        <tr>
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Siemens</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Model1</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        
+                                         
+                                          
+        
+                                            <td class="text-right">
+                                                <div class="dropdown">
+                                                    <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                        <a class="dropdown-item" href="#">Cihaz Ekle </a>
+                                                        <a class="dropdown-item" href="#">Cihaz  Sil</a>
+                                                        <a class="dropdown-item" href="#">Cihaz Güncelle</a>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </td>
+        
+        
+                                        </tr>
+                                        <tr>
+        
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Abbot</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Model2</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                       
+                                     
+        
+                                            <td class="text-right">
+                                                <div class="dropdown">
+                                                    <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                        <a class="dropdown-item" href="#">Cihaz Ekle </a>
+                                                        <a class="dropdown-item" href="#">Cihaz  Sil</a>
+                                                        <a class="dropdown-item" href="#">Cihaz Güncelle</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+        
+        
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Cihaz3</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Model3</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                          
+                                      
+        
+                                            <td class="text-right">
+                                                <div class="dropdown">
+                                                    <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                        <a class="dropdown-item" href="#">Cihaz Ekle </a>
+                                                        <a class="dropdown-item" href="#">Cihaz  Sil</a>
+                                                        <a class="dropdown-item" href="#">Cihaz Güncelle</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+        
+        
+                                        </tr>
+        
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                    <!-- /.card-body -->
+
+             
+                </div>
+               
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                </div>
+            </div>
+                
+
+               <!-- Kuruma Kullanıcılar -->
+               <div id="kullanicimodal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="kullaniciclose">&times;</span>
+                        <h2>Kurum Kullanıcıları</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Kullanıcılar</label>
+                                    <select id="input-useractive" class="form-control" name="useractive">
+                                        <option value="True">Fatih</option>
+                                        <option value="False">Volkan</option>
+
+                                    </select>
+                                </div>
+                             
+                          
+                                <div class="col-6 text-right">
+                                    <button  class="btn btn-neutral btn-primary">Ekle</button>
+                              </div>
+
+                            </div>
+                            </form>
+
+                            <div class="table-responsive">
+                                <table class="table align-items-center table-flush">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col" class="sort" data-sort="name">Kullanicilar</th>
+                                  
+                         
+        
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list">
+                                        <tr>
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Fatih Dinçer</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        
+                                         
+                                          
+        
+                                            <td class="text-right">
+                                                <div class="dropdown">
+                                                    <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                        <a class="dropdown-item" href="#">Kullanici Ekle</a>
+                                                        <a class="dropdown-item" href="#">Kullanici  Sil</a>
+                                                        <a class="dropdown-item" href="#">Kullanici Güncelle</a>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </td>
+        
+        
+                                        </tr>
+                                        <tr>
+        
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Volkan</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                       
+                                     
+        
+                                            <td class="text-right">
+                                                <div class="dropdown">
+                                                    <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                        <a class="dropdown-item" href="#">Kullanici Ekle</a>
+                                                        <a class="dropdown-item" href="#">Kullanici  Sil</a>
+                                                        <a class="dropdown-item" href="#">Kullanici Güncelle</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+        
+        
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">
+                                                <div class="media align-items-center">
+        
+                                                    <div class="media-body">
+                                                        <span class="name mb-0 text-sm">Yusuf</span>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                          
+                                      
+        
+                                            <td class="text-right">
+                                                <div class="dropdown">
+                                                    <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        <i class="fas fa-ellipsis-v"></i>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                        <a class="dropdown-item" href="#">Kullanici Ekle</a>
+                                                        <a class="dropdown-item" href="#">Kullanici  Sil</a>
+                                                        <a class="dropdown-item" href="#">Kullanici Güncelle</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+        
+        
+                                        </tr>
+        
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                   
+                </div>
+               
+           
+            </div>
+
+
+
+                <!-- Kuruma Ait Programlar -->
+                <div id="programmodal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="programclose">&times;</span>
+                            <h2>Kuruma Ait Programlar</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Program Adı</label>
+                                        <select id="input-useractive" class="form-control" name="useractive">
+                                            <option value="True">Program1</option>
+                                            <option value="False">Program2</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Program Adeti </label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                            placeholder="Program Adeti">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Ro</label> <br>
+
+                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                        <label for="vehicle1"> Fatih Dinçer</label><br>
+                                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                                        <label for="vehicle2"> Yusuf Aydın</label><br>
+
+                                    </div>
+
+                                    <div class="col-6 text-right">
+                                        <button  class="btn btn-neutral btn-primary">Ekle</button>
+                                  </div>
+
+                                </div>
+                                </form>
+
+                                <div class="table-responsive">
+                                    <table class="table align-items-center table-flush">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope="col" class="sort" data-sort="name">Program Adı</th>
+                                                <th scope="col" class="sort" data-sort="budget">Program Adeti</th>
+                                                <th scope="col" class="sort" data-sort="status">Ro</th>
+                             
+            
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="list">
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">ProgramAdı1</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">ProgramAdeti1</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Ro1</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                              
+            
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                            <a class="dropdown-item" href="#">Program Ekle</a>
+                                                            <a class="dropdown-item" href="#">Program Sil</a>
+                                                            <a class="dropdown-item" href="#">Program Güncelle</a>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </td>
+            
+            
+                                            </tr>
+                                            <tr>
+            
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">ProgramAdı2</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">ProgramAdeti2</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Ro2</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                        
+            
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                            <a class="dropdown-item" href="#">Program Ekle</a>
+                                                            <a class="dropdown-item" href="#">Program Sil</a>
+                                                            <a class="dropdown-item" href="#">Program Güncelle</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+            
+            
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Program Adı3</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">ProgramAdeti3</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">RO3 </span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                          
+            
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                            <a class="dropdown-item" href="#">Program Ekle</a>
+                                                            <a class="dropdown-item" href="#">Program Sil</a>
+                                                            <a class="dropdown-item" href="#">Program Güncelle</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+            
+            
+                                            </tr>
+            
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+                   
+                    <div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                    </div>
+                </div>
+
+            </div>
+
+
+                <!-- Kuruma Atanan Program Dönemleri -->
+                <div id="programdonemmodal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="programdonemclose">&times;</span>
+                            <h2>Kuruma Atanan Program Dönemleri</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Programlar</label>
+                                        <select id="input-useractive" class="form-control" name="useractive">
+                                            <option value="True">Programlar1</option>
+                                            <option value="False">Programlar2</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1"> Periyotlar </label>
+                                        <select id="input-useractive" class="form-control" name="useractive">
+                                            <option value="True">Periyotlar1</option>
+                                            <option value="False">Periyotlar2</option>
+
+                                        </select>
+                                    </div>
+                                   
+
+                                    <div class="col-6 text-right">
+                                        <button  class="btn btn-neutral btn-primary">Ekle</button>
+                                      </div>
+
+                                </div>
+                                </form>
+
+                                <div class="table-responsive">
+                                    <table class="table align-items-center table-flush">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope="col" class="sort" data-sort="name">Programlar</th>
+                                                <th scope="col" class="sort" data-sort="budget">Periyotlar</th>
+                 
+                             
+            
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="list">
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Program1</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Periyot1</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                               
+                                              
+            
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                            <a class="dropdown-item" href="#">Dönem Ekle</a>
+                                                            <a class="dropdown-item" href="#">Dönem Sil</a>
+                                                            <a class="dropdown-item" href="#">Dönem Güncelle</a>
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </td>
+            
+            
+                                            </tr>
+                                            <tr>
+            
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Program2</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Periyot2</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                           
+            
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                            <a class="dropdown-item" href="#">Dönem Ekle</a>
+                                                            <a class="dropdown-item" href="#">Dönem Sil</a>
+                                                            <a class="dropdown-item" href="#">Dönem Güncelle</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+            
+            
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Program3</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th scope="row">
+                                                    <div class="media align-items-center">
+            
+                                                        <div class="media-body">
+                                                            <span class="name mb-0 text-sm">Periyot3</span>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                               
+                                          
+            
+                                                <td class="text-right">
+                                                    <div class="dropdown">
+                                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="fas fa-ellipsis-v"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                                            <a class="dropdown-item" href="#">Dönem Ekle</a>
+                                                            <a class="dropdown-item" href="#">Dönem Sil</a>
+                                                            <a class="dropdown-item" href="#">Dönem Güncelle</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+            
+            
+                                            </tr>
+            
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                    </div>
+                   
+           
+                </div>
+
+
+
+           
+
+
+            <script>
+                // Get the modal
+                var cihazmodal = document.getElementById("cihazmodal");
+                var programmodal = document.getElementById("programmodal");
+                var kullanicimodal= document.getElementById("kullanicimodal");
+                var programdonemmodal=document.getElementById("programdonemmodal");
+                // Get the button that opens the modal
+                var cihazbutton = document.getElementById("cihazbutton");
+                var programbutton = document.getElementById("programbutton");
+                var kullanicibutton=document.getElementById("kullanicibutton");
+                var programdonembutton=document.getElementById("programdonembutton");
+                // Get the <span> element that closes the modal
+                var cihazspan = document.getElementsByClassName("cihazclose")[0];
+                var programspan = document.getElementsByClassName("programclose")[0];
+                var kullanicispan = document.getElementsByClassName("kullaniciclose")[0];
+                var programdonemspan = document.getElementsByClassName("programdonemclose")[0]; 
+
+                // When the user clicks the button, open the modal 
+                cihazbutton.onclick = function () {
+                    cihazmodal.style.display = "block";
+                }
+
+
+                programbutton.onclick = function () {
+                    programmodal.style.display = "block";
+                }
+
+                kullanicibutton.onclick = function () {
+                    kullanicimodal.style.display = "block";
+                }
+
+                programdonembutton.onclick = function () {
+                    programdonemmodal.style.display = "block";
+                }
+          
+          
+
+                // When the user clicks on <span> (x), close the modal
+                cihazspan.onclick = function () {
+                    cihazmodal.style.display = "none";
+                }
+                programspan.onclick = function () {
+                    programmodal.style.display = "none";
+                }
+                kullanicispan.onclick = function () {
+                    kullanicimodal.style.display = "none";
+                }
+
+                programdonemspan.onclick = function () {
+                    programdonemmodal.style.display = "none";
+                }
+
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == cihazmodal) {
+                        cihazmodal.style.display = "none";
+                    }
+                }
+
+                window.onclick = function (event) {
+                    if (event.target == programmodal) {
+                        programmodal.style.display = "none";
+                    }
+                }
+
+                
+                window.onclick = function (event) {
+                    if (event.target == kullanicimodal) {
+                        kullanicimodal.style.display = "none";
+                    }
+                }
+
+                window.onclick = function (event) {
+                    if (event.target == programdonemmodal) {
+                        programdonemmodal.style.display = "none";
+                    }
+                }
+            </script>
+
+
+        </div>
