@@ -18,6 +18,13 @@ const cihazlarView=(req,res,next)=>{
 const kitlerView=(req,res,next)=>{
     res.render("kitler");
 }
+const programlarView=(req,res,next)=>{
+    res.render("programlar");
+}
+
+const analitlerView=(req,res,next)=>{
+    res.render("analitler");
+}
 
 
 
@@ -26,7 +33,10 @@ module.exports = {
     deviceView,
     kurumlarView,
     cihazlarView,
-    kitlerView
+    kitlerView,
+    programlarView,
+    analitlerView,
+
 
 
 }
