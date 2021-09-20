@@ -1,6 +1,6 @@
 const express = require('express');
 
-const {indexView,programlarView,analitlerView,deviceView,kurumlarView,cihazlarView,kitlerView} = require('../controllers/homeController');
+const {indexView,programlarView,analitlerView,deviceView,kurumlarView,cihazlarView,kitlerView, userView} = require('../controllers/homeController');
 const router = express.Router();
 
 
@@ -11,6 +11,7 @@ router.get('/cihazlar',cihazlarView);
 router.get('/kitler',kitlerView);
 router.get('/programlar',programlarView);
 router.get('/analitler',analitlerView);
+router.get("/users",userView);
 
 module.exports = {
     routes: router

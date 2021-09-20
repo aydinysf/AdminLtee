@@ -5,7 +5,7 @@ const cors = require('cors');
 const bodParser = require('body-parser');
 
 const homeRoutes = require('./routes/home-routes');
-
+const authRoutes = require('./routes/auth-routes');
 
 const app = express();
 
@@ -17,6 +17,7 @@ app.use(bodParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(homeRoutes.routes);
+app.use(authRoutes.routes);
 
 
 

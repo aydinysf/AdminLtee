@@ -26,6 +26,10 @@ const analitlerView=(req,res,next)=>{
     res.render("analitler");
 }
 
+const userView=(req,res,next)=>{
+    res.render("users");
+}
+
 
 
 module.exports = {
@@ -36,6 +40,7 @@ module.exports = {
     kitlerView,
     programlarView,
     analitlerView,
+    userView
 
 
 
