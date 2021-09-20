@@ -14,6 +14,19 @@ const loginView = async (req, res, next) => {
     }
 }
 
+const handleLogin = (req, res, next) => {
+    
+    res.redirect('/');
+}
+
+const logOut = (req, res, next) => {
+    
+    res.redirect('/');
+}
+
+
+
+
 /*
 const loginView = async (req, res, next) => {
     try {
@@ -37,5 +50,8 @@ const logOut = (req, res, next) => {
 
 module.exports = {
     loginView,
+    handleLogin,
+    logOut
+
 
 }
