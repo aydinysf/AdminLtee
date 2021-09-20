@@ -90,7 +90,7 @@
 
         .modal-header {
             padding: 2px 16px;
-            background-color: #5cb85c;
+            background-color: mediumslateblue;
             color: white;
         }
 
@@ -102,6 +102,58 @@
             padding: 2px 16px;
             background-color: #5cb85c;
             color: white;
+        }
+
+          /* SearchBar TopNav Css */
+          .topnav {
+            overflow: auto;
+            background-color: #fefefe;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .topnav input[type=text] {
+            float: right;
+            padding: 6px;
+            margin-top: 8px;
+            margin-right: 16px;
+            border: none;
+            font-size: 17px;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .topnav a,
+            .topnav input[type=text] {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .topnav input[type=text] {
+                border: 1px solid #ccc;
+            }
         }
     </style>
 </head>
@@ -152,6 +204,10 @@
                 <!-- Card header -->
                 <div class="card-header border-0">
                     <h3 class="mb-0">Programlar Listesi</h3>
+                    <div class="topnav">
+
+                        <input type="text" placeholder="Arama..">
+                      </div>
                 </div>
                 <!-- Light table -->
                 <div class="table-responsive">
@@ -194,9 +250,9 @@
                                             <a class="dropdown-item" id="programanalitbutton">Program Analiti Ekle</a>
                                             <a class="dropdown-item" id="programtestbutton">Program Test Dönemlerini
                                                 Ekle</a>
-                                            <a class="dropdown-item" href="/devicemodels">Program Ekle</a>
+                    
                                             <a class="dropdown-item" href="/devicemodels">Program Sil</a>
-                                            <a class="dropdown-item" href="/devicemodels">Program Güncelle</a>
+               
 
                                         </div>
                                     </div>
@@ -236,9 +292,9 @@
                                             <a class="dropdown-item" id="cihazkitleributton">Program Analiti Ekle</a>
                                             <a class="dropdown-item" href="/devicemodels">Program Test Dönemlerini
                                                 Ekle</a>
-                                            <a class="dropdown-item" href="/devicemodels">Program Ekle</a>
+                        
                                             <a class="dropdown-item" href="/devicemodels">Program Sil</a>
-                                            <a class="dropdown-item" href="/devicemodels">Program Güncelle</a>
+                                  
 
                                         </div>
                                     </div>
@@ -273,9 +329,9 @@
                                             <a class="dropdown-item" id="cihazmodelbutton">Program Cihazı Ekle</a>
                                             <a class="dropdown-item" id="cihazkitleributton">Program Analiti Ekle</a>
                                             <a class="dropdown-item" href="/devicemodels">Program Test Dönemlerini Ekle</a>
-                                            <a class="dropdown-item" href="/devicemodels">Program Ekle</a>
+                    
                                             <a class="dropdown-item" href="/devicemodels">Program Sil</a>
-                                            <a class="dropdown-item" href="/devicemodels">Program Güncelle</a>
+              
 
                                         </div>
                                     </div>
@@ -309,9 +365,9 @@
                                                 <a class="dropdown-item" id="cihazmodelbutton">Program Cihazı Ekle</a>
                                                 <a class="dropdown-item" id="cihazkitleributton">Program Analiti Ekle</a>
                                                 <a class="dropdown-item" href="/devicemodels">Program Test Dönemlerini Ekle</a>
-                                                <a class="dropdown-item" href="/devicemodels">Program Ekle</a>
+               
                                                 <a class="dropdown-item" href="/devicemodels">Program Sil</a>
-                                                <a class="dropdown-item" href="/devicemodels">Program Güncelle</a>
+                         
     
                                             </div>
                                         </div>
@@ -347,9 +403,9 @@
                                                 <a class="dropdown-item" id="cihazmodelbutton">Program Cihazı Ekle</a>
                                                 <a class="dropdown-item" id="cihazkitleributton">Program Analiti Ekle</a>
                                                 <a class="dropdown-item" href="/devicemodels">Program Test Dönemlerini Ekle</a>
-                                                <a class="dropdown-item" href="/devicemodels">Program Ekle</a>
+     
                                                 <a class="dropdown-item" href="/devicemodels">Program Sil</a>
-                                                <a class="dropdown-item" href="/devicemodels">Program Güncelle</a>
+            
     
                                             </div>
                                         </div>
@@ -377,10 +433,9 @@
                         <div class="modal-body">
                             <form>
                                 <div class="card-body">
+                                    <h5  style="color: steelblue;">Program1'e Ait Cihazlar</h5>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Program Adı</label> <br>
-                    
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                        <label for="exampleInputEmail1">Program Adı:</label> <br>
                                         <label for="vehicle1"> Program1</label><br>
                                   
                     
@@ -414,6 +469,12 @@
 
                             <br> 
                             <h3 style="text-align: center;">Program Cihazları Listesi</h3>
+
+                            <h5 style="text-align: right; margin-right: 122px;"> Arama Alanı:</h5>
+                            <div class="topnav">
+
+                                <input type="text" placeholder="Arama..">
+                              </div>
 
                             <div class="table-responsive">
                                 <table class="table align-items-center table-flush">
@@ -467,9 +528,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+                       
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+                                       
 
                                                     </div>
                                                 </div>
@@ -514,9 +575,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+                     
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+                                  
                                                     </div>
                                                 </div>
                                             </td>
@@ -560,9 +621,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+               
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+                                       
                                                     </div>
                                                 </div>
                                             </td>
@@ -595,10 +656,10 @@
                         <div class="modal-body">
                             <form>
                                 <div class="card-body">
+                                    <h5  style="color: steelblue;">Program1'e Ait Analitler</h5>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Program Adı</label> <br>
+                                        <label for="exampleInputEmail1">Program Adı:</label> <br>
                     
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
                                         <label for="vehicle1"> Program1</label><br>
                   
                     
@@ -631,6 +692,12 @@
 
                             <br> 
                             <h3 style="text-align: center;">Analit Listesi</h3>
+
+                            <h5 style="text-align: right; margin-right: 122px;"> Arama Alanı:</h5>
+                            <div class="topnav">
+
+                                <input type="text" placeholder="Arama..">
+                              </div>
 
                             <div class="table-responsive">
                                 <table class="table align-items-center table-flush">
@@ -676,9 +743,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+                        
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+                                   
 
                                                     </div>
                                                 </div>
@@ -716,9 +783,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+                                          
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+                                    
                                                     </div>
                                                 </div>
                                             </td>
@@ -753,9 +820,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+                                   
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+                                     
                                                     </div>
                                                 </div>
                                             </td>
@@ -792,10 +859,11 @@
                         <div class="modal-body">
                             <form>
                                 <div class="card-body">
+                                    <h5  style="color: steelblue;">Program1'e Ait Test Dönemleri</h5>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Program Adı</label> <br>
+                                        <label for="exampleInputEmail1">Program Adı: </label> <br>
                     
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    
                                         <label for="vehicle1"> Program1</label><br>
                                    
                     
@@ -827,7 +895,13 @@
                             </form>
 
                             <br> 
-                            <h3 style="text-align: center;">Program Cihaz Listesi</h3>
+                            <h3 style="text-align: center;">Program Test Dönemi Listesi</h3>
+
+                            <h5 style="text-align: right; margin-right: 122px;"> Arama Alanı:</h5>
+                            <div class="topnav">
+
+                                <input type="text" placeholder="Arama..">
+                              </div>
 
                             <div class="table-responsive">
                                 <table class="table align-items-center table-flush">
@@ -873,9 +947,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+                                          
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+                           
 
                                                     </div>
                                                 </div>
@@ -913,9 +987,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+                                     
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+                             
                                                     </div>
                                                 </div>
                                             </td>
@@ -950,9 +1024,9 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <a class="dropdown-item" href="#">Ekle</a>
+                     
                                                         <a class="dropdown-item" href="#">Sil</a>
-                                                        <a class="dropdown-item" href="#">Güncelle</a>
+
                                                     </div>
                                                 </div>
                                             </td>
