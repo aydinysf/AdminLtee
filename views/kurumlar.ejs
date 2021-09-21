@@ -3,161 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-
-        /* Modal Content */
-        .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            border: 1px solid #888;
-            width: 80%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-animation-name: animatetop;
-            -webkit-animation-duration: 0.4s;
-            animation-name: animatetop;
-            margin-left: 300px;
-            animation-duration: 0.4s
-        }
-
-        /* Add Animation */
-        @-webkit-keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
-
-            to {
-                top: 0;
-                opacity: 1
-            }
-        }
-
-        @keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
-
-            to {
-                top: 0;
-                opacity: 1
-            }
-        }
-
-        /* The Close Button */
-        .close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-header {
-            padding: 2px 16px;
-            background-color: mediumslateblue;
-            color: white;
-        }
-
-        .modal-body {
-            padding: 2px 16px;
-        }
-
-        .modal-footer {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
-        }
-
-
-
-        /* SearchBar TopNav Css */
-        .topnav {
-            overflow: auto;
-            background-color: #fefefe;
-        }
-
-        .topnav a {
-            float: left;
-            display: block;
-            color: black;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .topnav a.active {
-            background-color: #2196F3;
-            color: white;
-        }
-
-        .topnav input[type=text] {
-            float: right;
-            padding: 6px;
-            margin-top: 8px;
-            margin-right: 16px;
-            border: none;
-            font-size: 17px;
-        }
-
-        @media screen and (max-width: 600px) {
-
-            .topnav a,
-            .topnav input[type=text] {
-                float: none;
-                display: block;
-                text-align: left;
-                width: 100%;
-                margin: 0;
-                padding: 14px;
-            }
-
-            .topnav input[type=text] {
-                border: 1px solid #ccc;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/newcss/biyomedfatih.css">
 </head>
 
 
@@ -184,22 +30,22 @@
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Kurum Adı</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Kurum Adı">
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Kurum Adı" maxlength="250">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Kurum Adresi</label>
                     <textarea name="message" class="form-control" rows="10" cols="30"
-                        placeholder="Kurum Adresi"></textarea>
+                        placeholder="Kurum Adresi" maxlength="250"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Kurumsal Sevk Adresi</label>
                     <textarea name="message" class="form-control" rows="10" cols="30"
-                        placeholder="Kurumsal Sevk Adresi "></textarea>
+                        placeholder="Kurumsal Sevk Adresi " maxlength="250" ></textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Kurum Aktifliği</label>
                     <div class="col-sm-10">
-                        <input type="checkbox" id="vehicle1" name="vehicle1">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" maxlength="250">
                         <label for="vehicle1"> Kurum Aktif</label><br>
 
                     </div>
@@ -287,8 +133,8 @@
                                             <a class="dropdown-item" href="#">Kurum Sil</a>
                                             <a class="dropdown-item" id="kullanicibutton">Kişi Ata</a>
                                             <a class="dropdown-item" id="programbutton">Program Ata</a>
-                                            <a class="dropdown-item" id="programdonembutton">Periyot Ekle</a>
-                                            <a class="dropdown-item" id="cihazbutton">Cihazlar</a>
+                                            <a class="dropdown-item" id="programdonembutton">Periyot Ata</a>
+                                            <a class="dropdown-item" id="cihazbutton">Cihaz Ata</a>
 
                                         </div>
                                     </div>
@@ -342,8 +188,8 @@
                                             <a class="dropdown-item" href="#">Kurum Sil</a>
                                             <a class="dropdown-item" href="#">Kişi Ata</a>
                                             <a class="dropdown-item" class="programbutton2">Program Ata</a>
-                                            <a class="dropdown-item" href="#">Periyot Ekle</a>
-                                            <a class="dropdown-item" href="#">Cihazlar</a>
+                                            <a class="dropdown-item" href="#">Periyot Ata</a>
+                                            <a class="dropdown-item" href="#">Cihaz Ata</a>
                                         </div>
                                     </div>
                                 </td>
@@ -395,8 +241,8 @@
                                             <a class="dropdown-item" href="#">Kurum Sil</a>
                                             <a class="dropdown-item" href="#">Kişi Ata</a>
                                             <a class="dropdown-item" class="programbutton3">Program Ata</a>
-                                            <a class="dropdown-item" href="#">Periyot Ekle</a>
-                                            <a class="dropdown-item" id="cihazbutton">Cihazlar</a>
+                                            <a class="dropdown-item" href="#">Periyot Ata</a>
+                                            <a class="dropdown-item" id="cihazbutton">Cihaz Ata</a>
                                         </div>
                                     </div>
                                 </td>
@@ -423,7 +269,7 @@
                                     <h5  style="color: steelblue;">Kurum1'e Ait Cihazlar</h5>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Cihaz Adı</label>
-                                        <select id="input-useractive" class="form-control" name="useractive">
+                                        <select id="input-useractive" class="form-control" name="useractive" maxlength="250">
                                             <option value="True">Siemens</option>
                                             <option value="False">Abbot</option>
                                             <option value="False">Cihaz3</option>
@@ -433,7 +279,7 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Cihaz Modeli</label>
-                                        <select id="input-useractive" class="form-control" name="useractive">
+                                        <select id="input-useractive" class="form-control" name="useractive" maxlength="250">
                                             <option value="True">Model1</option>
                                             <option value="False">Model2</option>
                                             <option value="False">Model3</option>
@@ -613,7 +459,7 @@
                                     <h5  style="color: steelblue;">Kurum1'e Ait Kullanıcılar</h5>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Kullanıcılar</label>
-                                        <select id="input-useractive" class="form-control" name="useractive">
+                                        <select id="input-useractive" class="form-control" name="useractive" maxlength="250">
                                             <option value="True">Fatih</option>
                                             <option value="False">Volkan</option>
                                             <option value="False">Yusuf</option>
@@ -766,7 +612,7 @@
                                     <h5  style="color: steelblue;">Kurum1'e Ait Programlar</h5>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Program Adı</label>
-                                        <select id="input-useractive" class="form-control" name="useractive">
+                                        <select id="input-useractive" class="form-control" name="useractive" maxlength="250">
                                             <option value="True">ProgramAdı1</option>
                                             <option value="False">ProgramAdı2</option>
                                             <option value="False">ProgramAdı3</option>
@@ -776,12 +622,12 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Program Adeti </label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                        <input type="text" class="form-control" id="exampleInputEmail1" maxlength="250"
                                             placeholder="Program Adeti">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Program Kısa Adı </label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                        <input type="text" class="form-control" id="exampleInputEmail1" maxlength="250"
                                             placeholder="Program Kısa Adı">
                                     </div>
                                     <div class="form-group">
@@ -1010,7 +856,7 @@
                                 <h5  style="color: steelblue;">Kurum1'e Ait Program Dönemleri</h5>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Programlar</label>
-                                    <select id="input-useractive" class="form-control" name="useractive">
+                                    <select id="input-useractive" class="form-control" name="useractive" maxlength="250">
                                         <option value="True">Program1</option>
                                         <option value="False">Program2</option>
                                         <option value="False">Program3</option>
@@ -1019,7 +865,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1"> Periyotlar </label>
-                                    <select id="input-useractive" class="form-control" name="useractive">
+                                    <select id="input-useractive" class="form-control" name="useractive" maxlength="250">
                                         <option value="True">Periyot1</option>
                                         <option value="False">Periyot2</option>
                                         <option value="False">Periyot3</option>
@@ -1265,3 +1111,6 @@
 
 
         </div>
+    </div>
+</div>
+</div>
