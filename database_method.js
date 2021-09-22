@@ -1,5 +1,6 @@
 var mysql = require('mysql');
 var http=require('http');
+const { response } = require('express');
 var con=mysql.createConnection({
   host:"localhost",
   user:"root",
@@ -16,7 +17,9 @@ exports.devicelist1=function(){
           else{
               
               console.log(result);
-          return result;}
+              return result;
+              response.render('cihazlar', {deviceName: results} )
+        }
 
         });
       });

@@ -3,6 +3,15 @@ const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const cors = require('cors');
 const bodParser = require('body-parser');
+const mysql= require("mysql");
+
+const con=mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password:"",
+    database:"biyomednew"
+});
+
 
 const homeRoutes = require('./routes/home-routes');
 const authRoutes = require('./routes/auth-routes');
@@ -19,7 +28,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(homeRoutes.routes);
 app.use(authRoutes.routes);
 
-
+app.get('/cihazlar',(req,res)=>{
+    con.query("Select * From tbldevices",function(err,rows,fields){
+        if(err) throw err;
+        else{
+            res.render('cihazlar', {items: rows});
+        }
+    })
+})
 
 
 app.listen(4000, () => console.log('App is listening on url http://localhost:4000'));

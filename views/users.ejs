@@ -102,14 +102,13 @@
                         <option value="False">Güvenlik</option>
                         <option value="False">Hastane</option>
                       </select>
-
                 </div>
 
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Kullanıcı Aktifliği</label><br>
                  
-                    <input type="checkbox" id="vehicle1" name="aktif" > 
+                    <input type="checkbox" id="vehicle1" name="aktif"  checked> 
                     <label for="vehicle1"> Kullanıcı Aktif</label><br>
              
                 </div>
@@ -142,7 +141,8 @@
                                 <th scope="col" class="sort" data-sort="name">E-Mail</th>
                                 <th scope="col" class="sort" data-sort="budget">Parola</th>
                                 <th scope="col" class="sort" data-sort="status">Kullanıcı Tipi</th>
-                                <th scope="col">Kullanıcı Aktifliği</th>
+                
+                                <th scope="col">Kullanıcı Aktif-Pasif</th>
                                
                             </tr>
                         </thead>
@@ -172,32 +172,27 @@
                                       </div>
                                     </div>
                                   </th>
+                               
                                   <th scope="row">
                                     <div class="media align-items-center">
-                                      
-                                      <div class="media-body">
-                                        <span class="name mb-0 text-sm">Aktif1</span>
-                                      </div>
+
+                                        <div class="media-body">
+                                            <input type="checkbox" id="aktifpasif" name="aktifpasif" value="true">
+                                        </div>
                                     </div>
-                                  </th>
+                                </th>
 
                             
 
                                 <td class="text-right">
-                                    <div class="dropdown">
-                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          
-                                            <a class="dropdown-item" id="analitkitbutton">Kullanıcı Sil</a>        
+                                  <div class="dropdown">
+                                      <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                          <i class="fas fa-ellipsis-v"></i>
+                                      </a>
                                      
-                
-
-                                        </div>
-                                    </div>
-                                </td>
+                                  </div>
+                              </td>
 
 
 
@@ -227,32 +222,27 @@
                                   </div>
                                 </div>
                               </th>
+                          
                               <th scope="row">
                                 <div class="media align-items-center">
-                                  
-                                  <div class="media-body">
-                                    <span class="name mb-0 text-sm">Aktif2</span>
-                                  </div>
+
+                                    <div class="media-body">
+                                        <input type="checkbox" id="aktifpasif" name="aktifpasif" value="true">
+                                    </div>
                                 </div>
-                              </th>
+                            </th>
 
                              
 
-                                <td class="text-right">
-                                    <div class="dropdown">
-                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        
-                                            <a class="dropdown-item" id="programanalitbutton">Kullanıcı Sil</a>        
-                                           
-                    
-
-                                        </div>
-                                    </div>
-                                </td>
+                            <td class="text-right">
+                              <div class="dropdown">
+                                  <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                      aria-expanded="false">
+                                      <i class="fas fa-ellipsis-v"></i>
+                                  </a>
+                                 
+                              </div>
+                          </td>
 
                             <tr>
                                 <th scope="row">
@@ -279,31 +269,27 @@
                                       </div>
                                     </div>
                                   </th>
+                             
                                   <th scope="row">
                                     <div class="media align-items-center">
-                                      
-                                      <div class="media-body">
-                                        <span class="name mb-0 text-sm">Aktif3</span>
-                                      </div>
+
+                                        <div class="media-body">
+                                            <input type="checkbox" id="aktifpasif" name="aktifpasif" value="true">
+                                        </div>
                                     </div>
-                                  </th>
+                                </th>
 
                              
 
                                 <td class="text-right">
-                                    <div class="dropdown">
-                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                  <div class="dropdown">
+                                      <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                          aria-expanded="false">
+                                          <i class="fas fa-ellipsis-v"></i>
+                                      </a>
                                      
-                                            <a class="dropdown-item" id="programanalitbutton">Kullanıcı Sil</a>        
-                                        
-
-                                        </div>
-                                    </div>
-                                </td>
+                                  </div>
+                              </td>
                                 <tr>
                                     <th scope="row">
                                         <div class="media align-items-center">
@@ -329,33 +315,28 @@
                                           </div>
                                         </div>
                                       </th>
+                                    
                                       <th scope="row">
                                         <div class="media align-items-center">
-                                          
-                                          <div class="media-body">
-                                            <span class="name mb-0 text-sm">Aktif4</span>
-                                          </div>
+    
+                                            <div class="media-body">
+                                                <input type="checkbox" id="aktifpasif" name="aktifpasif" value="true">
+                                            </div>
                                         </div>
-                                      </th>
+                                    </th>
     
 
                                   
     
                                     <td class="text-right">
-                                        <div class="dropdown">
-                                            <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                              
-                                                <a class="dropdown-item" id="programanalitbutton">Kullanıcı Sil</a>        
-                                          
-                                        
-    
-                                            </div>
-                                        </div>
-                                    </td>
+                                      <div class="dropdown">
+                                          <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                              aria-expanded="false">
+                                              <i class="fas fa-ellipsis-v"></i>
+                                          </a>
+                                         
+                                      </div>
+                                  </td>
     
                                 <tr>
                                     <th scope="row">
@@ -382,14 +363,16 @@
                                           </div>
                                         </div>
                                       </th>
+                              
+
                                       <th scope="row">
                                         <div class="media align-items-center">
-                                          
-                                          <div class="media-body">
-                                            <span class="name mb-0 text-sm">Aktif5</span>
-                                          </div>
+    
+                                            <div class="media-body">
+                                                <input type="checkbox" id="aktifpasif" name="aktifpasif" value="true">
+                                            </div>
                                         </div>
-                                      </th>
+                                    </th>
     
 
                           
@@ -400,12 +383,7 @@
                                                 aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
-                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                  
-                                            <a class="dropdown-item" id="programanalitbutton">Kullanıcı Sil</a>        
-                         
-    
-                                            </div>
+                                           
                                         </div>
                                     </td>
     

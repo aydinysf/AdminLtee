@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/newcss/biyomedfatih.css">
+</head>
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Kullanıcı Tipleri Sayfası</h1>
+                </div>
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Kullanıcı Tipleri Tablosu</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Kullanıcı Tipi</label>
+                    <select id="input-useractive" class ="form-control" > 
+                        <option value="True">Admin</option>
+                        <option value="False">Ziyaretçi</option>
+                        <option value="False">Personel</option>
+                        <option value="False">Güvenlik</option>
+                        <option value="False">Hastane</option>
+                      </select>
+                    
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                   
+                    <button type="submit" class="btn btn-primary">Ekle</button>
+                </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card ">
+                <!-- Card header -->
+                <div class="card-header border-0">
+                    <h3 class="mb-0">Kullanıcı Tipleri Listesi</h3>
+                    <div class="topnav">
+
+                        <input type="text" placeholder="Arama..">
+                      </div>
+                </div>
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col" class="sort" data-sort="name">Kullanıcı Tipi </th>
+                           
+
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row">
+                                    <span class="name mb-0 text-sm">Admin</span>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                          
+
+                                            <a class="dropdown-item" href="/devicemodels">Kullanıcı Tipi Sil</a>
+ 
+
+                                        </div>
+                                    </div>
+                                </td>
+
+
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Ziyaretçi</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                            
+                                           
+                                            <a class="dropdown-item" href="/devicemodels">Kullanıcı Tipi Sil</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Personel</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="/devicemodels">Kullanıcı Tipi Sil</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Güvenlik</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="/devicemodels">Kullanıcı Tipi Sil</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Hastane</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="/devicemodels">Kullanıcı Tipi Sil</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+
+         
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

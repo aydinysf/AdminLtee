@@ -139,6 +139,29 @@ const userView_post=(req,res,next)=>{
 }
 
 
+const kullaniciTipiView=(req,res,next)=>{
+    res.render("kullaniciTipi");
+}
+
+const kitmetodlariView=(req,res,next)=>{
+    res.render("kitmetodlari");
+}
+
+const numunelerView=(req,res,next)=>{
+    res.render("numuneler");
+}
+
+const cihazModelleriGrubuView=(req,res,next)=>{
+    res.render("cihazmodellerigrubu");
+}
+
+const birimtanimlamaView=(req,res,next)=>{
+    res.render("birimtanimlama");
+}
+
+
+
+
 
 
 module.exports = {
@@ -155,12 +178,12 @@ module.exports = {
     programlarView_post,
     kitlerView_post,
     analitlerView_post,
-    kurumlarView_post
-
-
-
-
-
+    kurumlarView_post,
+    kullaniciTipiView,
+    kitmetodlariView,
+    numunelerView,
+    cihazModelleriGrubuView,
+    birimtanimlamaView
 
 
 }

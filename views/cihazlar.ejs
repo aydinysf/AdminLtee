@@ -28,9 +28,9 @@
         <form action="/cihazlar" method="POST">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Cihaz Adı</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="cihaz" placeholder="Cihaz Adı">
-
+                    <label for="exampleInputEmail1">Cihaz Modeli</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="cihaz" placeholder="Cihaz Modeli">
+                    
 
                 </div>
                 <!-- /.card-body -->
@@ -58,7 +58,7 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">Cihaz Adı</th>
+                                <th scope="col" class="sort" data-sort="name">Cihaz Modeli</th>
                            
 
                             </tr>
@@ -66,12 +66,7 @@
                         <tbody class="list">
                             <tr>
                                 <th scope="row">
-                                    <div class="media align-items-center">
-
-                                        <div class="media-body">
-                                            <span class="name mb-0 text-sm">Cihaz1</span>
-                                        </div>
-                                    </div>
+                                    <span class="name mb-0 text-sm">Cihaz1</span>
                                 </th>
 
                                 <td class="text-right">
@@ -82,7 +77,7 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                             <a class="dropdown-item" id="cihazmodelbutton">Model Ekle</a>
-                                            <a class="dropdown-item" id="cihazkitleributton">Kit Ekle</a>
+                              
 
                                             <a class="dropdown-item" href="/devicemodels">Cihaz Sil</a>
  
@@ -113,7 +108,7 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                             <a class="dropdown-item" href="/devicemodels">Model Ekle</a>
-                                            <a class="dropdown-item" href="/devicemodels">Kit Ekle</a>
+                                   
                                            
                                             <a class="dropdown-item" href="/devicemodels">Cihaz Sil</a>
                       
@@ -140,7 +135,7 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                             <a class="dropdown-item" href="/devicemodels">Model Ekle</a>
-                                            <a class="dropdown-item" href="/devicemodels">Kit Ekle</a>
+         
 
                                             <a class="dropdown-item" href="/devicemodels">Cihaz Sil</a>
                  
@@ -167,7 +162,7 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                             <a class="dropdown-item" href="/devicemodels">Model Ekle</a>
-                                            <a class="dropdown-item" href="/devicemodels">Kit Ekle</a>
+                                    
                     
                                             <a class="dropdown-item" href="/devicemodels">Cihaz Sil</a>
                       
@@ -194,7 +189,7 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                             <a class="dropdown-item" href="/devicemodels">Model Ekle</a>
-                                            <a class="dropdown-item" href="/devicemodels">Kit Ekle</a>
+                                    
                                 
                                             <a class="dropdown-item" href="/devicemodels">Cihaz Sil</a>
                                           
@@ -228,7 +223,7 @@
                                     <h5  style="color: steelblue;">Cihaz1'e Ait Modeller</h5>
                                     <div class="form-group">
 
-                                        <label for="exampleInputEmail1">Cihaz Adı:</label>
+                                        <label for="exampleInputEmail1">Cihaz Modeli:</label>
                                         <label for="exampleInputEmail1">Cihaz1</label>
                                         
                                     </div>
@@ -259,7 +254,7 @@
                                 <table class="table align-items-center table-flush">
                                     <thead class="thead-light">
                                         <tr>
-                                            <th scope="col" class="sort" data-sort="name">Cihaz Adı</th>
+                                            <th scope="col" class="sort" data-sort="name">Cihaz Modeli</th>
                                             <th scope="col" class="sort" data-sort="name">Cihaz Modeli</th>
 
 
@@ -396,250 +391,26 @@
 
 
 
-                <!-- Cihaz Kitleri -->
-                <div id="cihazkitlerimodal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span class="cihazkitlericlose">&times;</span>
-                            <h2>Cihaz Kitleri</h2>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="card-body">
-                                    <h5  style="color: steelblue;">Cihaz1'e Ait Kitler</h5>
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Cihaz Adı:</label>
-                                        <label for="exampleInputEmail1">Cihaz1</label>
-                                        
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Cihaz Modeli</label>
-                                        <select id="input-useractive" class="form-control" name="useractive">
-                                            <option value="True">Model1</option>
-                                            <option value="False">Model2</option>
-                                            <option value="False">Model3</option>
-
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Kit Katalog Adı</label>
-                                        <select id="input-useractive" class="form-control" name="useractive">
-                                            <option value="True">Katalog1</option>
-                                            <option value="False">Katalog2</option>
-                                            <option value="False">Katalog3</option>
-
-                                        </select>
-                                    </div>
-
-
-
-                                    <div class="col-6 text-right">
-                                        <button class="btn btn-neutral btn-primary">Ekle</button>
-                                    </div>
-
-                                </div>
-                            </form>
-                            <br> 
-                            <h3 style="text-align: center;">Kit Listesi</h3>
-
-                            <h5 style="text-align: right; margin-right: 122px;"> Arama Alanı:</h5>
-                            <div class="topnav">
-
-                                <input type="text" placeholder="Arama..">
-                              </div>
-
-                            <div class="table-responsive">
-                                <table class="table align-items-center table-flush">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col" class="sort" data-sort="name">Cihaz Adı</th>
-                                            <th scope="col" class="sort" data-sort="name">Cihaz Modeli</th>
-                                            <th scope="col" class="sort" data-sort="name">Kit Katalog Adı</th>
-
-
-
-                                            <th scope="col"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="list">
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Cihaz1</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Model1</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Katalog1</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-
-
-
-                                            <td class="text-right">
-                                                <div class="dropdown">
-                                                    <a href="#" role="button" data-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fas fa-ellipsis-v"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                              
-                                                        <a class="dropdown-item" href="#">Sil</a>
-                                               
-
-                                                    </div>
-                                                </div>
-                                            </td>
-
-
-                                        </tr>
-                                        <tr>
-
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Cihaz2</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Model2</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Katalog2</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-
-                                            <td class="text-right">
-                                                <div class="dropdown">
-                                                    <a href="#" role="button" data-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fas fa-ellipsis-v"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        
-                                                        <a class="dropdown-item" href="#">Sil</a>
-                                              
-                                                    </div>
-                                                </div>
-                                            </td>
-
-
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Cihaz3</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Model3</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">Katalog3</span>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-
-                                            <td class="text-right">
-                                                <div class="dropdown">
-                                                    <a href="#" role="button" data-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fas fa-ellipsis-v"></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                      
-                                                        <a class="dropdown-item" href="#">Sil</a>
-                        
-                                                    </div>
-                                                </div>
-                                            </td>
-
-
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- /.card-body -->
-
-
-                    </div>
-
-
-                </div>
-
 
 
                 <script>
                     // Get the modal
                     var cihazmodelmodal=document.getElementById("cihazmodelmodal");
-                   var cihazkitlerimodal=document.getElementById("cihazkitlerimodal");
+           
                     // Get the button that opens the modal
    
                     var cihazmodelbutton=document.getElementById("cihazmodelbutton");
-                    var cihazkitleributton=document.getElementById("cihazkitleributton");
+  
                     // Get the <span> element that closes the modal
  
                     var cihazmodelspan = document.getElementsByClassName("cihazmodelclose")[0];
-                    var cihazkitlerispan = document.getElementsByClassName("cihazkitlericlose")[0];   
+        
                     // When the user clicks the button, open the modal 
               
                     cihazmodelbutton.onclick = function () {
                         cihazmodelmodal.style.display = "block";
                     }
-                    cihazkitleributton.onclick = function () {
-                        cihazkitlerimodal.style.display = "block";
-                    }
+           
 
 
                     // When the user clicks on <span> (x), close the modal
@@ -647,10 +418,7 @@
                             cihazmodelmodal.style.display = "none";
                     }
 
-                    cihazkitlerispan.onclick = function () {
-                            cihazkitlerimodal.style.display = "none";
-                    }
-
+            
 
 
                     // When the user clicks anywhere outside of the modal, close it
@@ -660,12 +428,7 @@
                         }
                     }
 
-                    window.onclick = function (event) {
-                        if (event.target == cihazkitlerimodal) {
-                            cihazkitlerimodal.style.display = "none";
-                        }
-                    }
-
+       
 
 
                 </script>

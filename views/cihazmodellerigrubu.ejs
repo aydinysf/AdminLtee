@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/newcss/biyomedfatih.css">
+</head>
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Cihaz Modelleri Grubu Sayfası</h1>
+                </div>
+
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Cihaz Modelleri Grubu Tablosu</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Cihaz Markası</label>
+                    <select id="input-useractive" class ="form-control" > 
+                        <option value="True">Cihaz Markası1</option>
+                        <option value="False">Cihaz Markası2</option>
+                        <option value="False">Cihaz Markası3</option>
+                
+                      </select>
+                    
+
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Cihaz Modellleri</label> <br>
+
+                    <input type="checkbox" id="vehicle1" >
+                    <label for="vehicle1"> Cihaz Modeli1</label><br>
+                    <input type="checkbox" id="vehicle2" >
+                    <label for="vehicle2"> Cihaz Modeli2</label><br>
+                    <input type="checkbox" id="vehicle2" >
+                    <label for="vehicle2"> Cihaz Modeli3</label><br>
+
+
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Cihaz Modelleri Grup Adı</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="analit" placeholder="Cihaz Modelleri Grup Adı">
+
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                   
+                    <button type="submit" class="btn btn-primary">Ekle</button>
+                </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card ">
+                <!-- Card header -->
+                <div class="card-header border-0">
+                    <h3 class="mb-0">Cihaz Modelleri Grubu Listesi</h3>
+                    <div class="topnav">
+
+                        <input type="text" placeholder="Arama..">
+                      </div>
+                </div>
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table align-items-center table-flush">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col" class="sort" data-sort="name">Cihaz Markası </th>
+                                <th scope="col" class="sort" data-sort="name">Cihaz Modeli  </th>
+                                <th scope="col" class="sort" data-sort="name"> Cihaz Modelleri Grubu </th>
+                           
+
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Markası1</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Modeli1</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Grup Adı1</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                          
+
+                                            <a class="dropdown-item" href="/devicemodels">Cihaz Modeli Grubu Sil</a>
+ 
+
+                                        </div>
+                                    </div>
+                                </td>
+
+
+
+
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Markası2</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Modeli2</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Grup Adı2</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                            
+                                           
+                                            <a class="dropdown-item" href="/devicemodels">Cihaz Modeli Grubu Sil</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Markası3</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Modeli3</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+
+                                        <div class="media-body">
+                                            <span class="name mb-0 text-sm">Cihaz Grup Adı3</span>
+                                        </div>
+                                    </div>
+                                </th>
+
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="/devicemodels">Cihaz Modeli Grubu Sil</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+
+         
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -29,8 +29,8 @@
         <form action="/kitler", method="POST">
             <div class="card-body">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Kit Adı</label> <br>
-                    <input type="text" class="form-control" id="exampleInputEmail1" name="kit" placeholder="Kit Adı">
+                    <label for="exampleInputEmail1">Kit Markası</label> <br>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="kit" placeholder="Kit Markası">
 
                 </div>
 
@@ -63,7 +63,7 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col" class="sort" data-sort="name">Kit Adı</th>
+                                <th scope="col" class="sort" data-sort="name">Kit Markası</th>
                             </tr>
                         </thead>
                         <tbody class="list">
@@ -172,7 +172,7 @@
                                 <div class="card-body">
                                     <h5  style="color: steelblue;">Kit1'e Ait Kataloglar</h5>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Kit Adı: </label> 
+                                        <label for="exampleInputEmail1">Kit Markası: </label> 
                                         <label for="exampleInputEmail1">Kit1</label> <br>
                        
                         
@@ -181,9 +181,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Kit Katalog Adı</label>
+                                        <label for="exampleInputEmail1">Kit Katalog Numarası</label>
                                         <input type="text" class="form-control" id="exampleInputEmail1"
-                                            placeholder="Kit Katalog Adı">
+                                            placeholder="Kit Katalog Numarası">
                                     </div>
 
 
@@ -210,8 +210,8 @@
                                 <table class="table align-items-center table-flush">
                                     <thead class="thead-light">
                                         <tr>
-                                            <th scope="col" class="sort" data-sort="name">Kit Adı</th>
-                                            <th scope="col" class="sort" data-sort="name">Kit Kataloğu</th>
+                                            <th scope="col" class="sort" data-sort="name">Kit Markası</th>
+                                            <th scope="col" class="sort" data-sort="name">Kit Kataloğu Numarası</th>
 
 
 
@@ -368,14 +368,14 @@
                                 <div class="card-body">
                                     <h5  style="color: steelblue;">Kit1'e Ait Katalog Metodları</h5>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Kit Adı:</label> 
+                                        <label for="exampleInputEmail1">Kit Markası:</label> 
                                         <label for="vehicle1"> Kit1</label><br>
 
 
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Kit Kataloğu Adı:</label> 
+                                        <label for="exampleInputEmail1">Kit Kataloğu Numarası:</label> 
                     
                                         <label for="vehicle1"> Katalog1</label><br>
 
@@ -383,8 +383,13 @@
 
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Metod Adı</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                            placeholder="Metod Adı">
+                                        <select id="input-useractive" class ="form-control" > 
+                                            <option value="True">Metod1</option>
+                                            <option value="False">Metod2</option>
+                                            <option value="False">Metod3</option>
+                                            <option value="False">Metod4</option>
+                                            <option value="False">Metod5</option>
+                                          </select>
                                     </div>
 
 
@@ -412,8 +417,8 @@
                                 <table class="table align-items-center table-flush">
                                     <thead class="thead-light">
                                         <tr>
-                                            <th scope="col" class="sort" data-sort="name">Kit Adı</th>
-                                            <th scope="col" class="sort" data-sort="name">Kit Kataloğu</th>
+                                            <th scope="col" class="sort" data-sort="name">Kit Markası</th>
+                                            <th scope="col" class="sort" data-sort="name">Kit Kataloğu Numarası</th>
                                             <th scope="col" class="sort" data-sort="name">Metod Adı</th>
 
 

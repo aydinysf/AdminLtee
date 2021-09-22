@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <label for="exampleInputPassword1">Kurum Aktifliği</label>
                     <div class="col-sm-10">
-                        <input type="checkbox" id="vehicle1"  name="aktif" maxlength="250">
+                        <input type="checkbox" id="vehicle1"  name="aktif" maxlength="250" checked>
                         <label for="vehicle1"> Kurum Aktif</label><br>
 
                     </div>
@@ -82,7 +82,8 @@
                                 <th scope="col" class="sort" data-sort="name">Kurum Adı</th>
                                 <th scope="col" class="sort" data-sort="budget">Kurum Adresi</th>
                                 <th scope="col" class="sort" data-sort="status">Kurumsal Sevk Adresi</th>
-                                <th scope="col">Kurum Aktifliği</th>
+                            
+                                <th scope="col">Kurum Aktif Pasif</th>
 
                                 <th scope="col"></th>
                             </tr>
@@ -113,11 +114,12 @@
                                         </div>
                                     </div>
                                 </th>
+                              
                                 <th scope="row">
                                     <div class="media align-items-center">
 
                                         <div class="media-body">
-                                            <span class="name mb-0 text-sm">Kurum Aktifliği 1</span>
+                                            <input type="checkbox" id="aktifpasif" name="aktifpasif" value="true">
                                         </div>
                                     </div>
                                 </th>
@@ -130,10 +132,10 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
-                                            <a class="dropdown-item" href="#">Kurum Sil</a>
+                                        
                                             <a class="dropdown-item" id="kullanicibutton">Kişi Ata</a>
                                             <a class="dropdown-item" id="programbutton">Program Ata</a>
-                                            <a class="dropdown-item" id="programdonembutton">Periyot Ata</a>
+                    
                                             <a class="dropdown-item" id="cihazbutton">Cihaz Ata</a>
 
                                         </div>
@@ -168,11 +170,12 @@
                                         </div>
                                     </div>
                                 </th>
+                              
                                 <th scope="row">
                                     <div class="media align-items-center">
 
                                         <div class="media-body">
-                                            <span class="name mb-0 text-sm">Kurum Aktifliği 2</span>
+                                            <input type="checkbox" id="aktifpasif" name="aktifpasif" value="true">
                                         </div>
                                     </div>
                                 </th>
@@ -185,10 +188,10 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
-                                            <a class="dropdown-item" href="#">Kurum Sil</a>
+                                        
                                             <a class="dropdown-item" href="#">Kişi Ata</a>
                                             <a class="dropdown-item" class="programbutton2">Program Ata</a>
-                                            <a class="dropdown-item" href="#">Periyot Ata</a>
+                                        
                                             <a class="dropdown-item" href="#">Cihaz Ata</a>
                                         </div>
                                     </div>
@@ -221,11 +224,12 @@
                                         </div>
                                     </div>
                                 </th>
+                             
                                 <th scope="row">
                                     <div class="media align-items-center">
 
                                         <div class="media-body">
-                                            <span class="name mb-0 text-sm">Kurum Aktifliği 3</span>
+                                            <input type="checkbox" id="aktifpasif" name="aktifpasif" value="true">
                                         </div>
                                     </div>
                                 </th>
@@ -238,10 +242,10 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
-                                            <a class="dropdown-item" href="#">Kurum Sil</a>
+                                        
                                             <a class="dropdown-item" href="#">Kişi Ata</a>
                                             <a class="dropdown-item" class="programbutton3">Program Ata</a>
-                                            <a class="dropdown-item" href="#">Periyot Ata</a>
+                  
                                             <a class="dropdown-item" id="cihazbutton">Cihaz Ata</a>
                                         </div>
                                     </div>
@@ -625,11 +629,7 @@
                                         <input type="text" class="form-control" id="exampleInputEmail1" maxlength="250"
                                             placeholder="Program Adeti">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Program Kısa Adı </label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" maxlength="250"
-                                            placeholder="Program Kısa Adı">
-                                    </div>
+                                  
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Ro</label> <br>
 
@@ -662,7 +662,7 @@
                                         <tr>
                                             <th scope="col" class="sort" data-sort="name">Program Adı</th>
                                             <th scope="col" class="sort" data-sort="budget">Program Adeti</th>
-                                            <th scope="col" class="sort" data-sort="budget">Program Kısa Adı</th>
+                                          
                                             <th scope="col" class="sort" data-sort="status">Ro</th>
 
 
@@ -688,14 +688,7 @@
                                                     </div>
                                                 </div>
                                             </th>
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">ProgramKısaAdı1</span>
-                                                    </div>
-                                                </div>
-                                            </th>
+                                         
                                             <th scope="row">
                                                 <div class="media align-items-center">
 
@@ -715,6 +708,7 @@
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
                                                         <a class="dropdown-item" href="#">Program Sil</a>
+                                                        <a class="dropdown-item" id="programdonembutton">Program Dönemi Ata</a>
 
 
                                                     </div>
@@ -741,14 +735,7 @@
                                                     </div>
                                                 </div>
                                             </th>
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">ProgramKısaAdı2</span>
-                                                    </div>
-                                                </div>
-                                            </th>
+                                       
                                             <th scope="row">
                                                 <div class="media align-items-center">
 
@@ -768,6 +755,7 @@
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
                                                         <a class="dropdown-item" href="#">Program Sil</a>
+                                                        <a class="dropdown-item" href="#">Program Dönemi Ata</a>
 
                                                     </div>
                                                 </div>
@@ -792,14 +780,7 @@
                                                     </div>
                                                 </div>
                                             </th>
-                                            <th scope="row">
-                                                <div class="media align-items-center">
-
-                                                    <div class="media-body">
-                                                        <span class="name mb-0 text-sm">ProgramKısaAdı3</span>
-                                                    </div>
-                                                </div>
-                                            </th>
+                                         
                                             <th scope="row">
                                                 <div class="media align-items-center">
 
@@ -819,6 +800,7 @@
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
                                                         <a class="dropdown-item" href="#">Program Sil</a>
+                                                        <a class="dropdown-item" href="#">Program Dönemi Ata</a>
 
                                                     </div>
                                                 </div>
@@ -855,13 +837,8 @@
                             <div class="card-body">
                                 <h5  style="color: steelblue;">Kurum1'e Ait Program Dönemleri</h5>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Programlar</label>
-                                    <select id="input-useractive" class="form-control" name="useractive" maxlength="250">
-                                        <option value="True">Program1</option>
-                                        <option value="False">Program2</option>
-                                        <option value="False">Program3</option>
-
-                                    </select>
+                                    <label for="exampleInputEmail1">Program Adı:</label> 
+                                    <label for="vehicle1"> Program1</label><br>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1"> Periyotlar </label>
@@ -893,7 +870,7 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th scope="col" class="sort" data-sort="name">Programlar</th>
+                                        <th scope="col" class="sort" data-sort="name">Program Adı</th>
                                         <th scope="col" class="sort" data-sort="budget">Periyotlar</th>
 
 
