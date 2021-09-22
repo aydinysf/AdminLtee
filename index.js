@@ -28,14 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(homeRoutes.routes);
 app.use(authRoutes.routes);
 
-app.get('/cihazlar',(req,res)=>{
-    con.query("Select * From tbldevices",function(err,rows,fields){
-        if(err) throw err;
-        else{
-            res.render('cihazlar', {items: rows});
-        }
-    })
-})
 
 
 app.listen(4000, () => console.log('App is listening on url http://localhost:4000'));
