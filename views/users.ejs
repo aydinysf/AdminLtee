@@ -77,29 +77,25 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form>
+        <form action="/users" method="POST">
             <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">E-Posta</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="E-Posta">
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="eposta" placeholder="E-Posta">
 
                 </div>
                 <div class="form-group">
           
                     <label for="exampleInputEmail1">Parola</label>
-                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Parola">
+                    <input type="password" class="form-control" id="exampleInputEmail1" name="parola" placeholder="Parola">
                     
                 </div>
 
-                <div class="form-group">
-                <label for="exampleInputEmail1">Parolayı Tekrar Girin</label>
-                  <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Parola">
-
-              </div>
+          
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Kullanıcı Tipi</label>
-                    <select id="input-useractive" class ="form-control" name="useractive"  > 
+                    <select id="input-useractive" class ="form-control"  name="kullanıcı"  > 
                         <option value="True">Admin</option>
                         <option value="False">Ziyaretçi</option>
                         <option value="False">Personel</option>
@@ -113,7 +109,7 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Kullanıcı Aktifliği</label><br>
                  
-                    <input type="checkbox" id="vehicle1" name="vehicle1" > 
+                    <input type="checkbox" id="vehicle1" name="aktif" > 
                     <label for="vehicle1"> Kullanıcı Aktif</label><br>
              
                 </div>
