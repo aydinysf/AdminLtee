@@ -1,4 +1,4 @@
-var path=require('path');
+/* var path=require('path');
 const mysql= require("mysql");
 
 const con=mysql.createConnection({
@@ -187,3 +187,4 @@ module.exports = {
 
 
 }
+*/
