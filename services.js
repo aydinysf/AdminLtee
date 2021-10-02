@@ -55,14 +55,39 @@ exports.deleteDevice = (req,res,next)=>{
 
         db.con.query(sql,idDevice,(err,dbrows,fields)=>{
             if(err){
-                console.log(err.toString());
+                console.log('Hata:'+err.toString());
                 
                 //res.render('./error.html',{result:'',partials:partials});
             }
             else{
-                res.render('./devices.html', { result: dbrows, partials: partials })
+                //res.render('./devices.html', { result: dbrows, partials: partials })
             }
         });
     });
     db.con.end;
+}
+exports.getdeviceModel =(req,res,next)=>{
+    
+    console.log("Giriş");
+    var idDevice = [];
+    db.con.connect((err)=>{
+
+        idDevice.push(String(req.params.devicecode));
+        var sql="SELECT dvc.devicename,mdl.modelname,mdl.devicemodelcode FROM biyomedıtage.tbldevicemodels mdl left join tbldevices dvc on mdl.devicecode=dvc.devicecode where dvc.devicecode=?";
+
+        db.con.query(sql,idDevice,(err,dbrows,fields)=>{
+            if(err){
+                console.log('Hata:'+err.toString());
+                
+                //res.render('./error.html',{result:'',partials:partials});
+            }
+            else{
+                idDevice=dbrows;
+                
+                res.render('./partials/model-modal.html', { deviceModelList: dbrows})
+            }
+        });
+    });
+    db.con.end;
+    return idDevice;
 }

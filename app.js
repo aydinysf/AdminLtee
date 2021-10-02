@@ -14,12 +14,13 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const service = require('./services');
 const { nextTick } = require('process');
 const { get } = require('http');
 const db = require('./database_method');
+const cons = require('consolidate');
 
 app.engine('html', engines.handlebars);
 
@@ -39,15 +40,23 @@ function getPartials() {
 }
 
 
-app.get('/device/:codedevice',(req,res,next)=>{
-    service.deleteDevice(req,res,next);
+app.get('/device/:codedevice', (req, res, next) => {
+  service.deleteDevice(req, res, next);
+
+  service.getDevice(req, res, next);
 });
-app.get('/device',(req,res,next)=>{
-  service.getDevice(req,res,next);
+app.get('/device', (req, res, next) => {
+  service.getDevice(req, res, next);
 });
-app.post('/device',(req,res,next)=>{
-  service.setDevice(req,res,next);
-  res.redirect('/device');
+app.post('/device', (req, res, next) => {
+  service.setDevice(req, res, next);
+
+  service.getDevice(req, res, next);
+});
+
+app.get('/devicemodel/:devicecode', (req, res, next) => {
+  console.log(req.params.devicecode);
+  service.getdeviceModel(req, res, next);
 });
 /*app.get('/device', (req, res) => {
   res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
@@ -78,4 +87,4 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(4000, () => console.log('App is listening on url http://localhost:4000'));
+app.listen(3000, () => console.log('App is listening on url http://localhost:3000'));
