@@ -39,8 +39,8 @@ exports.setDevice =(req,res,next) =>{
                 //res.render('./error.html',{result:'',partials:partials});
             }
             else{
-                res.render('./devices.html', { result: dbrows, partials: partials })
-
+               // res.render('./devices.html', { result: dbrows, partials: partials })
+                
             }
         });
     });
@@ -60,8 +60,7 @@ exports.deleteDevice = (req,res,next)=>{
                 //res.render('./error.html',{result:'',partials:partials});
             }
             else{
-                //res.render('./devices.html', { result: dbrows, partials: partials })
-               
+                res.render('./devices.html', { result: dbrows, partials: partials })
             }
         });
     });

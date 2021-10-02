@@ -41,13 +41,13 @@ function getPartials() {
 
 app.get('/device/:codedevice',(req,res,next)=>{
     service.deleteDevice(req,res,next);
-    res.redirect(200,'/device');
 });
 app.get('/device',(req,res,next)=>{
   service.getDevice(req,res,next);
 });
 app.post('/device',(req,res,next)=>{
   service.setDevice(req,res,next);
+  res.redirect('/device');
 });
 /*app.get('/device', (req, res) => {
   res.set('Cache-Control', 'public, max-age=300, s-maxage=600');

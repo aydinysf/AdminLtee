@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    {{>head}}
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="content-wrapper">
         <div class="wrapper">
 
-            {{>head}}
             <!-- Navbar -->
             {{>navbar}}
             <!-- /.navbar -->
@@ -32,7 +32,7 @@
             
                         <div class="card-footer">
             
-                            <button type="submit" class="btn btn-primary">Ekle</button>
+                            <button type="submit" class="btn btn-primary" id="cihazEkle">Ekle</button>
                         </div>
                 </form>
             </div>
@@ -105,7 +105,7 @@
                                 <div class="modal-body">
                                     <form>
                                         <div class="card-body">
-                                            <h5 style="color: steelblue;">Cihaz1'e Ait Modeller</h5>
+                                            <h5 style="color: steelblue;">{{Cihaz1}}' Cihazına Ait Modeller</h5>
                                             <div class="form-group">
             
                                                 <label for="exampleInputEmail1">Cihaz Adı:</label>
@@ -210,7 +210,17 @@
             
             
                         <script>
-                            
+                            // $("#cihazEkle").on("submit",function(event){
+                            //     event.preventDefault();
+                            //     $.ajax({
+                            //         url:"/device",
+                            //         method:"GET",
+                            //         contentTyp:"application/json",
+                            //         success:function(response){
+
+                            //         }
+                            //     });
+                            // });
                             // Get the modal
                              function openModal(a){
                                 cihazmodelmodal.style.display = "block";
