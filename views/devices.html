@@ -167,11 +167,11 @@
 
                             // Get the modal
                             function openModal(a, b) {
-                                $("#lblDeviceName").append(b);
+                                $("#lblDeviceName").empty().append(b);
                                 $("#hdnModelCode").val(a);
+                                var tbody = $("#model-modal");
+                                tbody.empty();
                                 $.get("/devicemodel/" + a, function (data) {
-                                    var tbody = $("#model-modal");
-                                    tbody.empty();
                                     tbody.append(data);
 
                                 });
@@ -180,9 +180,11 @@
                             }
                             $("#btnModelAdd").on('click', function () {
                                 var modelName = $("#txtModelName").val();
+
+                                $("#txtModelName").val("");
                                 var deviceCode = $('#hdnModelCode').val();
-                               
-                                $.post('/devicemodel',{ modelname: modelName, devicecode: deviceCode }, function(data){
+
+                                $.post('/devicemodel', { modelname: modelName, devicecode: deviceCode }, function (data) {
                                     $.get("/devicemodel/" + deviceCode, function (data) {
                                         $("#model-modal").empty().append(data);
                                     });
