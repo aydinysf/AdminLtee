@@ -74,10 +74,9 @@
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a class="dropdown-item" onclick="openModal('{{devicecode}}')">Model Ekle</a>
-                                                    <!-- <a class="dropdown-item" href="/devicemodel">Model Ekle</a> -->
-
-
+                                                    <a class="dropdown-item"
+                                                        onclick="openModal('{{devicecode}}','{{devicename}}')">Model
+                                                        Ekle</a>
                                                     <a class="dropdown-item" href="/device/{{devicecode}}">Cihaz Sil</a>
 
 
@@ -104,23 +103,24 @@
                                     <h2>Cihaz Modelleri</h2>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
-                                        <div class="card-body">
-                                            <h5 style="color: steelblue;">{{devicename}} Cihazına Ait Modeller</h5>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Cihaz Modeli</label>
-                                                <input type="text" class="form-control" id="exampleInputEmail1"
-                                                    placeholder="Cihaz Modeli">
-
-                                            </div>
-
-
-                                            <div class="col-6 text-right">
-                                                <button class="btn btn-neutral btn-primary">Ekle</button>
-                                            </div>
-
+                                    <!-- <form action="devicemodel" method="POST"> -->
+                                    <div class="card-body">
+                                        <h5 style="color: steelblue;"><label id="lblDeviceName"></label> Cihazına
+                                            Ait Modeller</h5>
+                                        <div class="form-group">
+                                            <label for="txtModelName">Cihaz Modeli</label>
+                                            <input type="text" class="form-control" id="txtModelName"
+                                                placeholder="Cihaz Modeli">
+                                            <input type="hidden" id="hdnModelCode" name="hdnModelCode">
                                         </div>
-                                    </form>
+
+
+                                        <div class="col-6 text-right">
+                                            <button class="btn btn-neutral btn-primary" id="btnModelAdd">Ekle</button>
+                                        </div>
+
+                                    </div>
+                                    <!-- </form> -->
 
                                     <br>
                                     <h3 style="text-align: center;">Model Listesi</h3>
@@ -138,14 +138,14 @@
                                                     <th scope="col" class="sort" data-sort="name">Cihaz Adı</th>
                                                     <th scope="col" class="sort" data-sort="name">Cihaz Modeli</th>
 
-                                                    
+
 
                                                     <th scope="col"></th>
                                                 </tr>
                                             </thead>
                                             <tbody class="list" id="model-modal">
-                                               
-                                                    
+
+
 
                                             </tbody>
                                         </table>
@@ -166,16 +166,49 @@
                         <script>
 
                             // Get the modal
-                            function openModal(a) {
-                                $.get("/devicemodel/"+a, function (data) {
-                                    console.log(data);
+                            function openModal(a, b) {
+                                $("#lblDeviceName").append(b);
+                                $("#hdnModelCode").val(a);
+                                $.get("/devicemodel/" + a, function (data) {
                                     var tbody = $("#model-modal");
                                     tbody.empty();
                                     tbody.append(data);
 
                                 });
                                 cihazmodelmodal.style.display = "block";
+
                             }
+                            $("#btnModelAdd").on('click', function () {
+                                var modelName = $("#txtModelName").val();
+                                var deviceCode = $('#hdnModelCode').val();
+                               
+                                $.post('/devicemodel',{ modelname: modelName, devicecode: deviceCode }, function(data){
+                                    $.get("/devicemodel/" + deviceCode, function (data) {
+                                        $("#model-modal").empty().append(data);
+                                    });
+                                });
+                                // var posting = $.post('/devicemodel', { modelname: modelName, devicecode: deviceCode });
+
+                                // // Put the results in a div
+                                // posting.done(function (data) {
+                                //     alert("test");
+                                //     var content = $(data).find("#content");
+                                //     console.log(content);
+
+                                //     $.get("/devicemodel/" + deviceCode, function (data) {
+                                //         $("#model-modal").empty().append(data);
+                                //     });
+                                // });
+
+                                // $.ajax({
+                                //     url: '/devicemodel',
+                                //     method: 'POST',
+                                //     contentType: 'application/json',
+                                //     success: function (response) {
+                                //         console.log(response);
+                                //     }
+                                // });
+                            });
                             //document.getElementById("cihazmodelmodal");
 
                             // Get the button that opens the modal

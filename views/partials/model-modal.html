@@ -23,14 +23,12 @@
 
     <td class="text-right">
         <div class="dropdown">
-            <a href="#" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+            <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-ellipsis-v"></i>
             </a>
-            <div
-                class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
-                <a class="dropdown-item" href="#">Sil</a>
+                <a class="dropdown-item" onclick="deleteModel('{{devicemodelcode}}','{{devicecode}}')">Sil</a>
 
 
             </div>
@@ -41,3 +39,16 @@
 </tr>
 
 {{/each}}
+<script>
+    function deleteModel(a, b) {
+        $.get("/devicemodeldelete/" + a, function (data) {
+
+        });
+
+        $.get("/devicemodel/" + b, function (data) {
+            var tbody = $("#model-modal");
+            tbody.empty();
+            tbody.append(data);
+        });
+    }
+</script>

@@ -41,6 +41,7 @@ function getPartials() {
 
 
 app.get('/device/:codedevice', (req, res, next) => {
+  console.log("silme başladı");
   service.deleteDevice(req, res, next);
 
   service.getDevice(req, res, next);
@@ -55,8 +56,15 @@ app.post('/device', (req, res, next) => {
 });
 
 app.get('/devicemodel/:devicecode', (req, res, next) => {
-  console.log(req.params.devicecode);
   service.getdeviceModel(req, res, next);
+});
+
+app.post('/devicemodel', (req, res, next) => {
+  service.setDeviceModel(req, res, next);
+  service.getdeviceModel(req, res, next);
+});
+app.get('/devicemodeldelete/:modelid',(req,res,next)=>{
+  service.deleteModel(req,res,next);
 });
 /*app.get('/device', (req, res) => {
   res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
